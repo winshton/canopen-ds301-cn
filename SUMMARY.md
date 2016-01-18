@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [适用范围](chapter1.md)
-* 参考资料
+* [参考资料](chapter2.md)
 
