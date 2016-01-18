@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [介绍](README.md)
 * [适用范围](chapter1.md)
 * [参考资料](chapter2.md)
 
