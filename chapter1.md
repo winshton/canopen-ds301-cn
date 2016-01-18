@@ -1,3 +1,5 @@
-# First Chapter
+# 1. **适用范围**
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+本规范定义了CANopen应用层。包括数据类型、编码规则、对象字典以及CANopen通信服务协议。此外,本规范也定义了CANopen网络管理服务协议。
+本规范规定了CANopen通信协议，例如物理层、通信对象标识符预定义连接集、应急对象(Emergency)、时间戳和同步通信对象。
+
