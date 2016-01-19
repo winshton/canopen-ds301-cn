@@ -97,5 +97,20 @@ $$ab = a_0 ... a_{m-1} b_0 ... b_{n-1}$$
 位序列b = b<sub>0</sub> .. b<sub>9</sub> = 0011 1000 01b表示UNSIGNED10的值21Ch,转换为两个八位字节传输:
 1C<sub>h<sub>和02<sub>h</sub>。
 
+###7.1.4 **基本数据类型**
+####7.1.4.1 **简述**
+基本数据类型“type_name”与其创建字符相同(aka Symbolic_name)，例如：
+
+BOOLEAN  BOOLEAN
+
+是BOOLEAN数据类型的的类型定义。
+####7.1.4.2 **NIL**
+基本数据类型NIL表示。
+####7.1.4.3 **Boolean**
+基本数据类型BOOLEAN的值为TRUE或FALSE。该值表示的位序列的长度为1。值为TRUE(res.FALSE)代表的位序列是1(res.0)。
+####7.1.4.4 **Void**
+基本数据类型VOIDn表示长度为n的位序列。类型为VOIDn的数据值是未定义的。类型为VOIDn的位序列数据中的位要么显式指定，要么标记为“随意”。
+
+数据类型VOIDn常用于保留字段和复合结构数据对齐的字节边界。
 
 
