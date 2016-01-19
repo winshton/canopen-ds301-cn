@@ -46,7 +46,7 @@ type_definition定义使用basic(res.~compound)数据类型的结构体称为bas
  
 因而有：
 
-$$b = b_0 b_1 ... b_{n-1}$$
+<center>$$b = b_0 b_1 ... b_{n-1}$$</center>
 
 叫做一个长度为|b| = n的位序列。长度为0的空序列用$$\varepsilon$$表示。
 
