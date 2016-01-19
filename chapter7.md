@@ -114,11 +114,23 @@ BOOLEAN  BOOLEAN
 数据类型VOIDn常用于保留字段和复合结构数据对齐的字节边界。
 
 ####7.1.4.5 **Unsigned Interger**
-基本数据类型UNSIGNEDn取值非负整数。范围0,...,2n-1。该数据表示长度为n的位序列。位序列
-b  = b0...bn -1
+基本数据类型UNSIGNEDn取值非负整数。范围0,...,2<sup>n</sup>-1。该数据表示长度为n的位序列。位序列
+<center>$$b  = b_0...b_{n-1}$$</center>
 配置值
-UNSIGNEDn(b) = bn-12n-1 +...+ b121+b020
+<center>$$UNSIGNEDn(b) = b_{n-1}2^{n-1} +...+ b_12^1+b_02^0$$</center>
 请注意，位顺序从左边最低字节开始。
-例如：值266 = 10Ah数据类型为UNSIGNED16，在总线上以两个八位字节传输，0Ah然后是01h。
+例如：值266 = 10A<sub>h</sub>数据类型为UNSIGNED16，在总线上以两个八位字节传输，0A<sub>h</sub>然后是01<sub>h</sub>。
 UNSIGNEDn的数据类型传输定义于图13。
+
+| **八进制数** | **1.** | **2.** | **3.** | **4.** | **5.** | **6.** | **7.** | **8.** |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| UNSIGNED8 | b<sub>7</sub>...b<sub>0</sub> |  |  |  |  |  |  |  |
+| UNSIGNED16 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> |  |  |  |  |  |  |
+| UNSIGNED24 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> |  |  |  |  |  |
+| UNSIGNED32 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> |  |  |  |  |
+| UNSIGNED40 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> |  |  |  |
+| UNSIGNED48 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> | b<sub>47</sub>...b<sub>40</sub> |  |  |
+| UNSIGNED56 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> | b<sub>47</sub>...b<sub>40</sub> | b<sub>55</sub>...b<sub>48</sub> |  |
+| UNSIGNED64 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> | b<sub>47</sub>...b<sub>40</sub> | b<sub>55</sub>...b<sub>48</sub> | b<sub>63</sub>...b<sub>56</sub> |
+
 
