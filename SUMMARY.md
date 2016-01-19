@@ -9,4 +9,5 @@
 * [数据链路层](chapter6.md)
 * [应用层](chapter7.md)
    * [通信对象](chapter7.2.md)
+   * 数据类型和编码规则
 
