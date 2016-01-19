@@ -133,4 +133,153 @@ UNSIGNEDn的数据类型传输定义于图13。
 | UNSIGNED56 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> | b<sub>47</sub>...b<sub>40</sub> | b<sub>55</sub>...b<sub>48</sub> |  |
 | UNSIGNED64 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> | b<sub>47</sub>...b<sub>40</sub> | b<sub>55</sub>...b<sub>48</sub> | b<sub>63</sub>...b<sub>56</sub> |
 
+图13：数据类型 UNSIGNEDn的传输规则
 
+####7.1.4.6 **Signed Integer**
+基本数据类型INTEGERn值为整数。取值的范围是-2<sup>n-1</sup>~2<sup>n–1</sup>–1.该数据表示长度为n的位序列。位序列<center>b = b0..b<sub>n-1</sub></center>
+配置值
+<center>INTEGERn(b) = b<sub>n-2</sub>2<sup>n-2</sup>+ ...+b<sub>1</sub>2<sup>1</sup>+b<sub>0</sub>2<sup>0</sup> 如果b<sub>n-1</sub> = 0</center>
+并执行双补运算
+<center>INTEGERn(b) = -INTEGERn(^b)-1	如果b<sub>n-1</sub> = 1</center>
+请注意，位顺序从左侧最低位开始。
+
+例如：值-266 = FEF6<sub>h</sub>数据类型NTERGER16在总线上以两个八位字节传输，F6<sub>h</sub>然后是FE<sub>h</sub>。
+INTEGERn的数据类型被定义见图14。
+
+| **八进制数** | **1.** | **2.** | **3.** | **4.** | **5.** | **6.** | **7.** | **8.** |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| INTEGER8 | b<sub>7</sub>...b<sub>0</sub> |  |  |  |  |  |  |  |
+| INTEGER16 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> |  |  |  |  |  |  |
+| INTEGER24 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> |  |  |  |  |  |
+| INTEGER32 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> |  |  |  |  |
+| INTEGER40 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> |  |  |  |
+| INTEGER48 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> | b<sub>47</sub>...b<sub>40</sub> |  |  |
+| INTEGER56 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> | b<sub>47</sub>...b<sub>40</sub> | b<sub>55</sub>...b<sub>48</sub> |  |
+| INTEGER64 | b<sub>7</sub>...b<sub>0</sub> | b<sub>15</sub>...b<sub>8</sub> | b<sub>23</sub>...b<sub>16</sub> | b<sub>31</sub>...b<sub>24</sub> | b<sub>39</sub>...b<sub>32</sub> | b<sub>47</sub>...b<sub>40</sub> | b<sub>55</sub>...b<sub>48</sub> | b<sub>63</sub>...b<sub>56</sub> |
+
+图14：数据类型INTEGERn传输规则
+
+####7.1.4.7 **浮点数**
+基本数据类型REAL32和REAL64值为实数。
+
+数据类型REAL32表示32位长度的位序列。编码遵守/IEEE754/。传输语法见图15。
+
+数据类型REAL64表示64位长度的位序列。编码遵守/IEEE754/。
+
+32位的位序列有值(有限非0实数、±0、±_)或NaN(not-a-number)。位序列
+<center>b = b<sub>0</sub>...b<sub>31</sub></center>
+可配值为(有限的非零数)
+<center>REAL32(b) = (-1)<sup>S</sup>2<sup>E-127</sup>(1+F)</center>
+这里
+S = b<sub>31</sub>是符号。
+
+E = b<sub>30</sub>2<sup>7</sup>+...+b<sub>23</sub>2<sup>0</sup>, 0<E<255、为无偏(un-biase)指数。
+
+F = 2<sub>-23</sub>(b<sub>22</sub>2<sup>22</sup> +...+b<sub>1</sub>2<sup>1</sup>+b<sub>0</sub>2<sup>0</sup>)表示小数部分。
+
+E = 0用于表达±0。E=255用于表示无穷大和NaN’s.请注意，位顺序从左侧最低位开始。
+
+例如：
+
+6.25 = 2<sup>E-12</sup>(1+F)
+
+E = 129 = 2<sup>7</sup>+2<sup>0</sup>和
+
+F = 2<sup>-1</sup>+2<sup>-4</sup> = 2<sup>-23</sup>(2<sup>22</sup>+2<sup>19</sup>)项数表示为：
+
+| S | E | F |
+| -- | -- | -- |
+| b<sub>31</sub> | b<sub>30</sub>.b<sub>23</sub> | b<sub>22</sub>.b<sub>0</sub> |
+| 0 | 100 0000 1<sub>b</sub> | 100 1000 0000 0000 0000 0000<sub>b</sub> |
+
+6.25 =b<sub>0</sub>..b<sub>31</sub> = 0000 0000 0000 0000 0001 0011 0000 0010<sub>b</sub>
+
+转换顺序：
+
+| **八进制数** | **1.** | **2.** | **3.** | **4.** |
+| -- | -- | -- | -- | -- |
+| REAL32 |00<sub>h</sub> | 00<sub>h</sub> | C8<sub>h</sub> | 40<sub>h</sub> |
+|  | b<sub>7</sub>..b<sub>0</sub> | b<sub>15</sub>..b<sub>8</sub> | b<sub>23</sub>..b<sub>16</sub> | b<sub>31</sub>..b<sub>24</sub> |
+
+图15：数据类型 REAL32的传输规则
+
+###7.1.5 **复合数据类型**
+复合数据类型展开为包含基本数据类型的独立表单类型定义。相应地，复合数据类型´type_name´命名规则是由基本类型´basic_type_i´表单组成的复合数据名´component_name_i´确定。
+
+复合数据类型由ARRAY 和 STRUCT OF构建。
+    
+    STRUCT OF
+        basic_type_1    component_name_1,
+        basic_type_2    component_name_2,
+            …                   …
+        basic_type_N    component_name_N
+    type_name
+
+    ARRAY[length] OF basic_type type_name
+
+复合数据类的位序列由组成复合数据的各数据的位序列连接而成。
+
+假设组件´component_name_i´表达的位序列为
+
+                b(i), 其中 i = 1,…,N
+然后复合数据的位序列连接为
+<center>b<sub>0</sub>(1)..b<sub>n-1</sub>(1)..b<sub>n-1</sub>(N).</center>
+例如：
+如下数据类型
+
+    STRUCT OF
+        INTEGER10   x,
+        UNSIGNED5   u
+    NewData
+假定x = –423 = 259<sub>h</sub>，u = 30 = 1E<sub>h</sub>。让b(x)和b(u)表示位序列x和u。然后：
+
+b(x)        =  b<sub>0</sub>(x)..b<sub>9</sub>(x)  = 1001101001<sub>b</sub>
+
+b(u)        =  b<sub>0</sub(u)..b<sub>4</sub>(u) = 01111<sub>b</sub>
+
+b(xu)            = b(x)b(u)     = b<sub>0</sub>(xu)..b<sub>14</sub>(xu) = 1001101001 01111<sub>b</sub>
+
+该值的结构被转换为两个八位字节，59<sub>h</sub>然后是7A<sub>h</sub>。
+
+###7.1.6 **扩展数据类型**
+####7.1.6.1 **简述**
+扩展数据类型分为基本数据类型和复合数据类型，分别在以下小节定义。
+####7.1.6.2 **八进制字符串**
+数据类型OCTET_STRIN长度定义如下，length：八进制节字符串的长度。
+
+    ARRAY[length] OF UNSIGNED8 OCTET_STRINGlength
+####7.1.6.3 **可显示字符串**
+数据类型VISIBLE_STRINGlength定义如下，VISIBLE_CHAR类型数据取值 0h和20h~7Eh。数据由ISO 
+646-1973(E)7位编码的字符解释。length：可见字符串长度。
+
+    UNSIGNED8	VISIBLE_CHAR
+    ARRAY[length]  OF VISIBLE_CHAR	VISIBLE_STRINGlength
+无需0h作为字符串结束标志。
+####7.1.6.4 **Unicode字符串**
+数据类型UNICODE_STRINGlength定义如下；length unicode字符串长度。
+    
+    ARRAY[length] OF UNSIGNED16	UNICODE_STRINGlength
+####7.1.6.5 **时间**
+数据类型TIME_OF_DAY表示绝对时间。根据这一定义和编码规则，TIME_OF_DAY由48位的位序列表达。
+
+成员ms是午夜起算的毫秒计数。成员days是自1984年1月1日以来的天数。
+
+    STRUCT OF
+        UNSIGNED28      ms,
+        VOID4           reserved,
+        UNSIGNED16      days
+    TIME_OF_DAY
+####7.1.6.6 **时间差**
+数据类型TIME_DIFFERENCE表示时间差。根据这一定义和编码规则,时间差由48位的位序列表达。
+
+ms表示毫秒数。days表示天数。
+
+    STRUCT OF
+        UNSIGNED28      ms,
+        VOID4           reserved,
+        UNSIGNED16      days
+    TIME_DIFFERENCE
+####7.1.6.7 **域**
+域用于从客户端到服务器传输任意大的数据块，反之亦然。数据块内容由应用程序指定不在本文范围。
+
+<span>
