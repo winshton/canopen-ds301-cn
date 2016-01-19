@@ -22,7 +22,7 @@ PDO分两种用法，发送和接收，分别是Transmit-PDO(TPDO) 和Receive-PD
 
 注意：每个逻辑设备不限制PDO数量，一个只包含单个逻辑设备的CANopen设备可以有多至512个PDO。
 
-|CANopen设备中的逻辑设备|CANopen设备中的PDO编号|设备协议中的PDO编号|
+|**CANopen设备中的逻辑设备**|**CANopen设备中的PDO编号**|**设备协议中的PDO编号**|
 |---|---|---|
 |1<sup>st</sup>逻辑设备|PDO number+0<br/>(PDO1到PDO64)|PDO number<br/>(PDO1到PDO64)|
 |2<sup>nd</sup>逻辑设备|PDO number+64<br/>(PDO65到PDO128)|PDO number<br/>(PDO1到PDO64)|
@@ -33,4 +33,12 @@ PDO分两种用法，发送和接收，分别是Transmit-PDO(TPDO) 和Receive-PD
 |7<sub>th</sub>逻辑设备|PDO number+384<br/>(PDO385到PDO448)|PDO number<br/>(PDO1到PDO64)|
 |8<sub>th</sub>逻辑设备|PDO number+448<br/>(PDO449到PDO512)|PDO number<br/>(PDO1到PDO64)|
 
+表3：PDO编号计算举例
+
+####7.2.2.2 **传输模式**
+PDO传输模式分为:
+* 同步传输
+* 事件驱动传输
+
+CANopen设备的同步由同步应用定期发送同步对象(SYNC对象)来实现。SYNC对象是一个预定义的通信对象(见7.2.5)。图 16 说明了同步和事件驱动的传输原则过程。同步PDO在紧接着SYNC对象之后的同步窗中传输。
 
