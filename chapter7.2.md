@@ -476,7 +476,9 @@ SDO下载启动协议执行过程如图21所示。
 - reserved：为将来保留，始终为0。
 
 <center>图22：SDO分段下载协议</center>
+
 #####7.2.4.3.5 **SDO上传协议**
+
 ![图23：SDO上传协议](./CANopen_DS301_CN_image/23.png)
 
 <center>图23：SDO上传协议</center>
@@ -515,5 +517,6 @@ SDO上传启动协议执行过程如图24所示。
 - reserved：为将来保留，始终为0。
 
 <center>图24：SDO上传启动协议</center>
+
 
 
