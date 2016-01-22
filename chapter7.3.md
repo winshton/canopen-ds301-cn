@@ -96,35 +96,37 @@ CAN-ID分配方案(定义中表38和表39)包括功能部分，它决定了对�
 |**COB**|**功能码**|**CAN-ID**|
 |---|---|---|
 |EMCY|0001<sub>b</sub>|129(081h)–255(0FFh)
-|PDO1(tx)|0011<sub>b</sub>|385(181<sub>b</sub>)–511(1FF<sub>b</sub>)|
-|PDO1(rx)|0100<sub>b</sub>|513(201<sub>b</sub>)–639(27F<sub>b</sub>)|
-|PDO2(tx)|0101<sub>b</sub>|641(281<sub>b</sub>)–767(2FF<sub>b</sub>)|
-|PDO2(rx)|0110<sub>b</sub>|769(301<sub>b</sub>)–895(37F<sub>b</sub>)|
-|PDO3(tx)|0111<sub>b</sub>|897(381<sub>b</sub>)–1023(3FF<sub>b</sub>)|
-|PDO3(rx)|1000<sub>b</sub>|1025(401<sub>b</sub>)–1151(47F<sub>b</sub>)|
-|PDO4(tx)|1001<sub>b</sub>|1153(481<sub>b</sub>)–1279(4FF<sub>b</sub>)|
-|PDO4(rx)|1010<sub>b</sub>|1281(501<sub>b</sub>)–1407(57F<sub>b</sub>)|
-|SDO(tx)|1011<sub>b</sub>|1409(581<sub>b</sub>)–1535(5FF<sub>b</sub>)|
-|SDO(rx)|1100<sub>b</sub>|1537(601<sub>b</sub>)–1663(67F<sub>b</sub>)|
-|NMT错误控制|1110<sub>b</sub>|1793(701<sub>b</sub>)–1919(77F<sub>b</sub>)|
+|PDO1(tx)|0011<sub>b</sub>|385(181<sub>h</sub>)–511(1FF<sub>h</sub>)|
+|PDO1(rx)|0100<sub>b</sub>|513(201<sub>h</sub>)–639(27F<sub>h</sub>)|
+|PDO2(tx)|0101<sub>b</sub>|641(281<sub>h</sub>)–767(2FF<sub>h</sub>)|
+|PDO2(rx)|0110<sub>b</sub>|769(301<sub>h</sub>)–895(37F<sub>h</sub>)|
+|PDO3(tx)|0111<sub>b</sub>|897(381<sub>h</sub>)–1023(3FF<sub>h</sub>)|
+|PDO3(rx)|1000<sub>b</sub>|1025(401<sub>h</sub>)–1151(47F<sub>h</sub>)|
+|PDO4(tx)|1001<sub>b</sub>|1153(481<sub>h</sub>)–1279(4FF<sub>h</sub>)|
+|PDO4(rx)|1010<sub>b</sub>|1281(501<sub>h</sub>)–1407(57F<sub>h</sub>)|
+|SDO(tx)|1011<sub>b</sub>|1409(581<sub>h</sub>)–1535(5FF<sub>h</sub>)|
+|SDO(rx)|1100<sub>b</sub>|1537(601<sub>h</sub>)–1663(67F<sub>h</sub>)|
+|NMT错误控制|1110<sub>b</sub>|1793(701<sub>h</sub>)–1919(77F<sub>h</sub>)|
 
 表39是CANopen设备视角。  
 即使网络支持扩展帧，通用预定义连接集也仅使用11位CAN-ID标准帧。  
 通用预定义连接集适用于所有的CANopen设备，并且都遵守特定的设备协议，不遵守任何应用协议。  
-7.3.4	特定预定义连接集
-特定预定义连接集用于替换通用预定义连接集，其遵守某应用协议。特定预定义连接集不在本规范定义范围，而是由相应的应用协议定义。
+###7.3.4 **特定预定义连接集**
+特定预定义连接集用于替换通用预定义连接集，其遵守某应用协议。特定预定义连接集不在本规范定义范围，而是由相应的应用协议定义。  
  
-7.3.5	受限CAN-IDs
+###7.3.5 **受限CAN-IDs**
 任何列在表40的CAN-IDs使用受限。受限CAN-ID不能用于任何可配置通信对象，SYNC、TIME、EMCY、 PDO和SDO都不行。
-表40：受限CAN-ID
 
-CAN-ID	COB使用
-0(000h)	NMT
-1(001h)–127(07Fh)	保留
-257(101h)–384(180h)	保留
-1409(581h)–1535(5FFh)	默认SDO(tx)
-1537(601h)–1663(67Fh)	默认SDO(rx)
-1760(6E0h)–1791(6FFh)	保留
-1793(701h)–1919(77Fh)	NMT错误控制
-2020(780h)–2047(7FFh)	保留
+<center/>表40：受限CAN-ID
+
+|**CAN-ID**|**COB使用**|
+|---|---|
+|0(000<sub>h</sub>)|NMT
+|1(001<sub>h</sub>)–127(07F<sub>h</sub>)|保留|
+|257(101<sub>h</sub>)–384(180<sub>h</sub>)|保留|
+|1409(581<sub>h</sub>)–1535(5FF<sub>h</sub>)|默认SDO(tx)|
+|1537(601<sub>h</sub>)–1663(67F<sub>h</sub>)|默认SDO(rx)|
+|1760(6E0<sub>h</sub>)–1791(6FF<sub>h</sub>)|保留|
+|1793(701<sub>h</sub>)–1919(77F<sub>h</sub>)|NMT错误控制|
+|2020(780<sub>h</sub>)–2047(7FF<sub>h</sub>)|保留|
 
