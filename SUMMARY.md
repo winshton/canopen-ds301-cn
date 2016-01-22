@@ -10,4 +10,5 @@
 * [应用层](chapter7.md)
    * [数据类型和编码规则](chapter7.1.md)
    * [通信对象](chapter7.2.md)
+   * 网络初始化和系统boot-up
 
