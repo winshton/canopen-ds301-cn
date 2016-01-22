@@ -828,20 +828,36 @@ TIME生产者广播时间戳对象。TIME提供了简单的网络时钟。由于
 本规范定义了应急错误码分类(表25)、应急错误代码(表26)和错误寄存器(见7.5.2.2)。由具体应用定义的附加错误信息（低字节错误码）和应急条件不在本文范围。附加错误码由其他协议规范定义。  
 <center/>表25：应急错误代码分类
 
-|**错误码**|**描述**|
-00 xxh	错误复位或没有错误
-10 xxh	常规错误
-20 xxh	当前的
-21 xxh	当前，CANopen设备输入侧
-22 xxh	当前CANopen设备内部
-23 xxh	当前，CANopen设备输出端
-30 xxh	电压
-31 xxh	主供电电压
-32 xxh	CANopen设备内部电压
-33 xxh	输出电压
-40 xxh	温度
-41 xxh	环境温度
-42 xxh	CANopen设备温度
-50 xxh	CANopen设备硬件
-60 xxh	CANopen设备软件
+|**错误代码**|**描述**|
+|---|---|
+|00 xx<sub>h</sub>|错误复位或没有错误|
+|10 xx<sub>h</sub>|常规错误|
+|20 xx<sub>h</sub>|当前的|
+|21 xx<sub>h</sub>|当前，CANopen设备输入侧|
+|22 xx<sub>h</sub>|当前CANopen设备内部|
+|23 xx<sub>h</sub>|当前，CANopen设备输出端|
+|30 xx<sub>h</sub>|电压|
+|31 xx<sub>h</sub>|主供电电压|
+|32 xx<sub>h</sub>|CANopen设备内部电压|
+|33 xx<sub>h</sub>|输出电压|
+|40 xx<sub>h</sub>|温度|
+|41 xx<sub>h</sub>|环境温度|
+|42 xx<sub>h</sub>|CANopen设备温度|
+|50 xx<sub>h</sub>|CANopen设备硬件|
+|60 xx<sub>h</sub>|CANopen设备软件|
+|**错误代码**|**描述**|
+|61 xx<sub>h</sub>|内部软件|
+|62 xx<sub>h</sub>|用户软件|
+|63 xx<sub>h</sub>|数据集|
+|70 xx<sub>h</sub>|附加模块|
+|80 xx<sub>h</sub>|监控|
+|81 xx<sub>h</sub>|通讯|
+|82 xx<sub>h</sub>|协议错误|
+|90 xx<sub>h</sub>|外部错误|
+|F0 xx<sub>h</sub>|附加功能|
+|FF xx<sub>h</sub>|CANopen设备规范|
+
+<center/>表26：应急错误代码
+
+
 
