@@ -77,38 +77,40 @@ CAN-ID分配方案(定义中表38和表39)包括功能部分，它决定了对�
  
 预定义连接集支持一个应急对象、一个SDO、至多4个RPDOs、4TPDOs和NMT对象。
 
+![图50：通用预定义连接集CAN-ID分配方案设置](./CANopen_DS301_CN_image/50.png)
 
-
-图50：通用预定义连接集CAN-ID分配方案设置
+<center/>图50：通用预定义连接集CAN-ID分配方案设置
 
 表38和表39列出了支持的对象和访问CAN-IDs。
 
-表38：通用预定义连接集广播对象
+<center/>表38：通用预定义连接集广播对象
 
-COB	功能码	CAN-ID
-NMT	0000b	0(000H)
-SYNC	0001b	128(080H)
-TIME	0010b	256(100H)
+|**COB**|**功能码**|**CAN-ID**|
+|---|---|---|
+|NMT|0000<sub>b</sub>|0(000<sub>H</sub>)|
+|SYNC|0001<sub>b</sub>|128(080<sub>H</sub>)|
+|TIME|0010<sub>b</sub>|256(100<sub>H</sub>)|
 
-表39：点对点对象的通用预定义连接设置
+<center/>表39：点对点对象的通用预定义连接设置
 
-COB	功能码	CAN-ID
-EMCY	0001b	129(081h)–255(0FFh)
-PDO1(tx)	0011b	385(181h)–511(1FFh)
-PDO1(rx)	0100b	513(201h)–639(27Fh)
-PDO2(tx)	0101b	641(281h)–767(2FFh)
-PDO2(rx)	0110b	769(301h)–895(37Fh)
-PDO3(tx)	0111b	897(381h)–1023(3FFh)
-PDO3(rx)	1000b	1025(401h)–1151(47Fh)
-PDO4(tx)	1001b	1153(481h)–1279(4FFh)
-PDO4(rx)	1010b	1281(501h)–1407(57Fh)
-SDO(tx)	1011b	1409(581h)–1535(5FFh)
-SDO(rx)	1100b	1537(601h)–1663(67Fh)
-NMT错误控制	1110b	1793(701h)–1919(77Fh)
+|**COB**|**功能码**|**CAN-ID**|
+|---|---|---|
+|EMCY|0001<sub>b</sub>|129(081h)–255(0FFh)
+|PDO1(tx)|0011<sub>b</sub>|385(181<sub>b</sub>)–511(1FF<sub>b</sub>)|
+|PDO1(rx)|0100<sub>b</sub>|513(201<sub>b</sub>)–639(27F<sub>b</sub>)|
+|PDO2(tx)|0101<sub>b</sub>|641(281<sub>b</sub>)–767(2FF<sub>b</sub>)|
+|PDO2(rx)|0110<sub>b</sub>|769(301<sub>b</sub>)–895(37F<sub>b</sub>)|
+|PDO3(tx)|0111<sub>b</sub>|897(381<sub>b</sub>)–1023(3FF<sub>b</sub>)|
+|PDO3(rx)|1000<sub>b</sub>|1025(401<sub>b</sub>)–1151(47F<sub>b</sub>)|
+|PDO4(tx)|1001<sub>b</sub>|1153(481<sub>b</sub>)–1279(4FF<sub>b</sub>)|
+|PDO4(rx)|1010<sub>b</sub>|1281(501<sub>b</sub>)–1407(57F<sub>b</sub>)|
+|SDO(tx)|1011<sub>b</sub>|1409(581<sub>b</sub>)–1535(5FF<sub>b</sub>)|
+|SDO(rx)|1100<sub>b</sub>|1537(601<sub>b</sub>)–1663(67F<sub>b</sub>)|
+|NMT错误控制|1110<sub>b</sub>|1793(701<sub>b</sub>)–1919(77F<sub>b</sub>)|
 
-表39是CANopen设备视角。
-即使网络支持扩展帧，通用预定义连接集也仅使用11位CAN-ID标准帧。
-通用预定义连接集适用于所有的CANopen设备，并且都遵守特定的设备协议，不遵守任何应用协议。
+表39是CANopen设备视角。  
+即使网络支持扩展帧，通用预定义连接集也仅使用11位CAN-ID标准帧。  
+通用预定义连接集适用于所有的CANopen设备，并且都遵守特定的设备协议，不遵守任何应用协议。  
 7.3.4	特定预定义连接集
 特定预定义连接集用于替换通用预定义连接集，其遵守某应用协议。特定预定义连接集不在本规范定义范围，而是由相应的应用协议定义。
  
