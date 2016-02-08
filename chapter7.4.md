@@ -195,51 +195,42 @@ CANopen设备可选支持标准数据类型编码的数据长度(UNSIGNED32)。�
 
 |索引|子索引|名称|数据类型|
 |---|---|---|---|
-|0021<sub>h</sub>|00<sub>h</sub>|最大子索引支持|UNSIGNED8|
+|0022<sub>h</sub>|00<sub>h</sub>|最大子索引支持|UNSIGNED8|
 |''|01<sub>h</sub>|COB-ID 客户端->服务器|UNSIGNED32|
 |''|02<sub>h</sub>|COB-ID 服务器->客户端|UNSIGNED32|
 |''|03<sub>h</sub>|SDO客户端应答服务器的Node-ID|UNSIGNED8|
 
 ####7.4.8.4 **身份记录规格**
-表49指定身份的记录。
-表49：身份记录
-索引	子索引	名称	数据类型
-0023h	00h	最大子索引支持	UNSIGNED8
-	01h	Vendor-ID	UNSIGNED32
-	02h	产品码	UNSIGNED32
-	03h	修订版本号	UNSIGNED32
-	04h	序列号	UNSIGNED32
-7.4.8.5OS调试记录规格
-表50指定OS调试记录。
+表49指定身份的记录。  
+<center/>表49：身份记录
 
+|索引|子索引|名称|数据类型|
+|---|---|---|---|
+|0023<sub>h</sub>|00<sub>h</sub>|最大子索引支持|UNSIGNED8|
+|''|01<sub>h</sub>|Vendor-ID|UNSIGNED32|
+|''|02<sub>h</sub>|产品码|UNSIGNED32|
+|''|03<sub>h</sub>|修订版本号|UNSIGNED32|
+|''|04<sub>h</sub>|序列号|UNSIGNED32|
+####7.4.8.5 **OS调试记录规格**
+表50指定OS调试记录。  
 
+<center/>表50：OS调试记录
 
-表50：OS调试记录
-
-索引	子索引	名称	数据类型
-0024h	00h	最大子索引支持	UNSIGNED8
-	01h	命令	OCTET_STRING
-	02h	状态
-00h-命令已完成-没有错误
-01h-命令完成-错误
-02h——预留
-:::::
-FEh——预留
-FFh-命令执行	UNSIGNED8
-	03h	回复	OCTET_STRING
-7.4.8.6OS命令记录规格
+|索引|子索引|名称|数据类型|
+|---|---|---|---|
+|0024<sub>h</sub>|00<sub>h</sub>|最大子索引支持|UNSIGNED8|
+|''|01<sub>h</sub>|命令|OCTET_STRING|
+|''|02<sub>h</sub>|状态<br/>00<sub>h</sub>-命令已完成-没有错误<br/>01<sub>h</sub>-命令完成-错误<br/>02<sub>h</sub>——预留<br/>:::::<br/>FE<sub>h</sub>——预留<br/>FF<sub>h</sub>-命令执行<br/>|UNSIGNED8|
+|''|03<sub>h</sub>|回复|OCTET_STRING|
+####7.4.8.6 **OS命令记录规格**
 表51中指定OS命令的记录。
-表51：OS命令的记录
-索引	子索引	名称	数据类型
-0025h	00h	最大子索引支持	UNSIGNED8
-	01h	命令	OCTET_STRING
-	02h	状态
-00h-命令已完成-没有错误-未回复 
-01h-命令已完成-没有错误-答复 
-02h-命令完成-错误-未回复
-03h-命令完成-错误-回复
-04h-预留
-:::::
-FEh——预留
-FFh-命令执行	UNSIGNED8
-	03h	回复	OCTET_STRING
+<center/>表51：OS命令的记录
+
+|索引|子索引|名称|数据类型|
+|---|---|---|---|
+|0025<sub>h</sub>|00<sub>h</sub>|最大子索引支持|UNSIGNED8|
+|''|01<sub>h</sub>|命令|OCTET_STRING|
+|''|02<sub>h</sub>|状态<br/>00<sub>h</sub>-命令已完成-没有错误-未回复<br/>01<sub>h</sub>-命令已完成-没有错误-答复<br/>02<sub>h</sub>-命令完成-错误-未回复<br/>03<sub>h</sub>-命令完成-错误-回复<br/>04<sub>h</sub>-预留<br/>:::::<br/>FE<sub>h</sub>——预留<br/>FF<sub>h</sub>-命令执行|UNSIGNED8|
+|''|03<sub>h</sub>|回复|OCTET_STRING|
+
+
