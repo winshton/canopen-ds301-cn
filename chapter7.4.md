@@ -168,14 +168,15 @@ CANopen设备可选支持标准数据类型编码的数据长度(UNSIGNED32)。�
 
 <center/>表46：PDO通讯参数记录
 
-索引	子索引	名称	数据类型
-0020h	00h	最大子索引号	UNSIGNED8
-	01h	COB-ID	UNSIGNED32
-	02h	传输类型	UNSIGNED8
-	03h	抑制时间	UNSIGNED16
-	04h	保留	UNSIGNED8
-	05h	事件定时器	UNSIGNED16
-	06h	同步启动值	UNSIGNED8
+|索引|子索引|名称|数据类型|
+|---|---|---|---|
+|0020h|00h|最大子索引号|UNSIGNED
+|	|01h	COB-ID	UNSIGNED32
+|	|02h	传输类型	UNSIGNED8
+|	|03h	抑制时间	UNSIGNED16
+|	|04h	保留	UNSIGNED8
+|	|05h	事件定时器	UNSIGNED16
+|	|06h	同步启动值	UNSIGNED8
 7.4.8.2PDO 映射参数记录规格
 表47表达PDO 映射参数记录。
 表47：PDO映射参数记录
