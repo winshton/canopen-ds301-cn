@@ -11,5 +11,5 @@
    * [数据类型和编码规则](chapter7.1.md)
    * [通信对象](chapter7.2.md)
    * [网络初始化和系统boot-up](chapter7.3.md)
-   * 对象字典
+   * [对象字典](chapter7.4.md)
 
