@@ -143,12 +143,13 @@ CANopen设备可选支持标准数据类型编码的数据长度(UNSIGNED32)。�
 
 <center/>表45：复合数据类型示例
 
-子索引	值	(说明)
-00h	04h	( 4个子索引)
-01h	0007h	(UNSIGNED32)
-02h	0005h	(UNSIGNED8)
-03h	0006h	(UNSIGNED16)
-04h	0005h	(UNSIGNED8)
+|子索引|值|(说明)|
+|---|---|---|
+|00<sub>h</sub>|04<sub>h</sub>|( 4个子索引)|
+|01<sub>h</sub>|0007<sub>h</sub>|(UNSIGNED32)|
+|02<sub>h</sub>|0005<sub>h</sub>|(UNSIGNED8)|
+|03<sub>h</sub>|0006<sub>h</sub>|(UNSIGNED16)|
+|04<sub>h</sub>|0005<sub>h</sub>|(UNSIGNED8)|
 
 标准(简单)和复合的制造商特定数据类型可通过读取子索引01<sub>h</sub>来区分：复合数据类型对象该子索引是有值的，而标准数据类型对象该索引不存在，因此会得到中止SDO传输的反馈。  
 请注意,某些条目数据类型为UNSIGNED32的对象是带有字符结构的(例如PDO COB-ID，见图67)。  
