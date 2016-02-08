@@ -170,24 +170,26 @@ CANopen设备可选支持标准数据类型编码的数据长度(UNSIGNED32)。�
 
 |索引|子索引|名称|数据类型|
 |---|---|---|---|
-|0020h|00h|最大子索引号|UNSIGNED
-|	|01h	COB-ID	UNSIGNED32
-|	|02h	传输类型	UNSIGNED8
-|	|03h	抑制时间	UNSIGNED16
-|	|04h	保留	UNSIGNED8
-|	|05h	事件定时器	UNSIGNED16
-|	|06h	同步启动值	UNSIGNED8
-7.4.8.2PDO 映射参数记录规格
-表47表达PDO 映射参数记录。
-表47：PDO映射参数记录
+|0020<sub>h</sub>|00h|最大子索引号|UNSIGNED8|
+|''|01<sub>h</sub>|COB-ID|UNSIGNED32|
+|''|02<sub>h</sub>|传输类型|UNSIGNED8|
+|''|03<sub>h</sub>|抑制时间|UNSIGNED16|
+|''|04<sub>h</sub>|保留|UNSIGNED8|
+|''|05<sub>h</sub>|事件定时器|UNSIGNED16|
+|''|06<sub>h</sub>|同步启动值|UNSIGNED8|
+####7.4.8.2 **PDO映射参数记录规格**
+表47表达PDO 映射参数记录。  
+<center/>表47：PDO映射参数记录
 
-索引	子索引	名称	数据类型
-0021h	00h	PDO映射对象数	UNSIGNED8
-	01h	第1个映射的对象	UNSIGNED32
-	02h	第2个映射的对象	UNSIGNED32
-	:	:::	::::::
-	40h	第64个映射的对象	UNSIGNED32
-7.4.8.3SDO参数记录规格
+|索引|子索引|名称|数据类型|
+|---|---|---|---|
+|0021<sub>h</sub>|00<sub>h</sub>|PDO映射对象数|UNSIGNED8|
+|''|01<sub>h</sub>|第1个映射的对象|UNSIGNED32|
+|''|02<sub>h</sub>|第2个映射的对象|UNSIGNED32|
+|''|:|:::|::::::|
+|''|40<sub>h</sub>|第64个映射的对象|UNSIGNED32|
+
+####7.4.8.3 **SDO参数记录规格**
 表48指定SDO参数记录。
 表48：SDO参数记录
 
