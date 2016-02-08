@@ -100,39 +100,39 @@ B000h到BFFFh的系统变量应包含输入变量和输出变量，其为有层�
 |0010<sub>h</sub>|DEFTYPE|INTEGER24|
 |0011<sub>h</sub>|DEFTYPE|REAL64|
 |**索引**|**对象**|**名称**|
-|0012<sub>h</sub>|DEFTYPE	INTEGER40
-|0013<sub>h</sub>|DEFTYPE	INTEGER48
-|0014<sub>h</sub>|DEFTYPE	INTEGER56
-|0015<sub>h</sub>|DEFTYPE	INTEGER64
-|0016<sub>h</sub>|DEFTYPE	UNSIGNED24
-|0017<sub>h</sub>|保留
-|0018<sub>h</sub>|DEFTYPE	UNSIGNED40
-|0019<sub>h</sub>|DEFTYPE	UNSIGNED48
-|001A<sub>h</sub>|DEFTYPE	UNSIGNED56
-|001B<sub>h</sub>|DEFTYPE	UNSIGNED64
-|001C<sub>h</sub>–001Fh	保留
-|0020<sub>h</sub>	DEFSTRUCT	PDO_COMMUNICATION_PARAMETER
-|0021<sub>h</sub>	DEFSTRUCT	PDO_MAPPING
-|0022<sub>h</sub>	DEFSTRUCT	SDO_PARAMETER
-|0023<sub>h</sub>	DEFSTRUCT	IDENTITY
-|0024<sub>h</sub> – 003Fh	保留
-|0040<sub>h</sub> – 005Fh	DEFSTRUCT	制造商的复合数据类型
-|0060<sub>h</sub> – 007Fh	DEFTYPE	设备协议规范的标准数据类型 1st 的逻辑设备
-|0080<sub>h</sub> – 009Fh	DEFSTRUCT	设备协议规范的标准数据类型 1st 的逻辑设备
-|00A0<sub>h</sub> – 00BFh	DEFTYPE	设备协议规范的标准数据类型 2nd 的逻辑设备
-|00C0<sub>h</sub> – 00DFh	DEFSTRUCT	设备协议规范的标准数据类型 2nd的逻辑设备
-|00E0<sub>h</sub> – 00FFh	DEFTYPE	设备协议规范的标准数据类型 3rd的逻辑设备
-|0100<sub>h</sub> – 011Fh	DEFSTRUCT	设备协议规范的标准数据类型 3rd的逻辑设备
-|0120<sub>h</sub> – 013Fh	DEFTYPE	设备协议规范的标准数据类型 4th的逻辑设备
-|0140<sub></sub> – 015Fh	DEFSTRUCT	设备协议规范的标准数据类型 4th的逻辑设备
-|0160<sub>h</sub> – 017Fh	DEFTYPE	设备协议规范的标准数据类型 5th的逻辑设备
-|0180<sub>h</sub> – 019Fh	DEFSTRUCT	设备协议规范的标准数据类型 5th的逻辑设备
-|01A0<sub>h</sub> – 01BFh	DEFTYPE	设备协议规范的标准数据类型 6th的逻辑设备
-|01C0<sub>h</sub> – 01DFh	DEFSTRUCT	设备协议规范的标准数据类型 6th的逻辑设备
-|01E0<sub>h</sub> – 01FFh	DEFTYPE	设备协议规范的标准数据类型 7th的逻辑设备
-|0200<sub>h</sub> – 021Fh	DEFSTRUCT	设备协议规范的标准数据类型 7th的逻辑设备
-|0220<sub>h</sub> – 023Fh	DEFTYPE	设备协议规范的标准数据类型 8th的逻辑设备
-|0240<sub>h</sub> – 025Fh	DEFSTRUCT	设备协议规范的标准数据类型 8th的逻辑设备
+|0012<sub>h</sub>|DEFTYPE|INTEGER40|
+|0013<sub>h</sub>|DEFTYPE|INTEGER48|
+|0014<sub>h</sub>|DEFTYPE|INTEGER56|
+|0015<sub>h</sub>|DEFTYPE|INTEGER64|
+|0016<sub>h</sub>|DEFTYPE|UNSIGNED24|
+|0017<sub>h</sub>|保留||
+|0018<sub>h</sub>|DEFTYPE|UNSIGNED40|
+|0019<sub>h</sub>|DEFTYPE|UNSIGNED48|
+|001A<sub>h</sub>|DEFTYPE|UNSIGNED56|
+|001B<sub>h</sub>|DEFTYPE|UNSIGNED64|
+|001C<sub>h</sub>–001F<sub>h</sub>保留||
+|0020<sub>h</sub>|DEFSTRUCT|PDO_COMMUNICATION_PARAMETER|
+|0021<sub>h</sub>|DEFSTRUCT|PDO_MAPPING|
+|0022<sub>h</sub>|DEFSTRUCT|SDO_PARAMETER|
+|0023<sub>h</sub>|DEFSTRUCT|IDENTITY|
+|0024<sub>h</sub>–003F<sub>h</sub>|保留||
+|0040<sub>h</sub>–005F<sub>h</sub>|DEFSTRUCT|制造商的复合数据类型|
+|0060<sub>h</sub>–007F<sub>h</sub>|DEFTYPE|设备协议规范的标准数据类型1<sup>st</sup>的逻辑设备|
+|0080<sub>h</sub>–009F<sub>h</sub>|DEFSTRUCT|设备协议规范的标准数据类型<sup>1st</sup>的逻辑设备|
+|00A0<sub>h</sub>–00BF<sub>h</sub>|DEFTYPE|设备协议规范的标准数据类型2<sup>nd</sup>的逻辑设备|
+|00C0<sub>h</sub>–00DF<sub>h</sub>|DEFSTRUCT|设备协议规范的标准数据类型2<sup>nd</sup>的逻辑设备|
+|00E0<sub>h</sub>–00FF<sub>h</sub>|DEFTYPE|设备协议规范的标准数据类型3<sup>rd</sup>的逻辑设备|
+|0100<sub>h</sub>–011F<sub>h</sub>|DEFSTRUCT|设备协议规范的标准数据类型3<sup>rd</sup>的逻辑设备|
+|0120<sub>h</sub>–013F<sub>h</sub>|DEFTYPE|设备协议规范的标准数据类型4<sup>th</sup>的逻辑设备|
+|0140<sub>h</sub>–015F<sub>h</sub>|DEFSTRUCT|设备协议规范的标准数据类型4<sup>th</sup>的逻辑设备|
+|0160<sub>h</sub>–017F<sub>h</sub>|DEFTYPE|设备协议规范的标准数据类型5<sup>th</sup>的逻辑设备|
+|0180<sub>h</sub>–019F<sub>h</sub>|DEFSTRUCT|设备协议规范的标准数据类型5<sup>th</sup>的逻辑设备|
+|01A0<sub>h</sub>–01BF<sub>h</sub>|DEFTYPE|设备协议规范的标准数据类型6<sup>th</sup>的逻辑设备|
+|01C0<sub>h</sub>–01DF<sub>h</sub>|DEFSTRUCT|设备协议规范的标准数据类型6<sup>th</sup>的逻辑设备|
+|01E0<sub>h</sub>–01FF<sub>h</sub>|DEFTYPE|设备协议规范的标准数据类型7<sup>th</sup>的逻辑设备|
+|0200<sub>h</sub>–021F<sub>h</sub>|DEFSTRUCT|设备协议规范的标准数据类型7<sup>th</sup>的逻辑设备|
+|0220<sub>h</sub>–023F<sub>h</sub>|DEFTYPE|设备协议规范的标准数据类型8<sup>th</sup>的逻辑设备|
+|0240<sub>h</sub>–025F<sub>h</sub>|DEFSTRUCT|设备协议规范的标准数据类型8<sup>th</sup>的逻辑设备|
 数据类型使用详见7.1。每个CANopen设备不需要支持所有已定义的数据类型。CANopen设备仅需支持它在1000h到AFFF用到的数据类型。
 预定义的复合数据类型放在标准的数据类型之后。详见7.4.8。
 CANopen设备可选支持标准数据类型编码的数据长度(UNSIGNED32)。例如索引000Ch
