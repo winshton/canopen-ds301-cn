@@ -110,7 +110,7 @@ B000h到BFFFh的系统变量应包含输入变量和输出变量，其为有层�
 |0019<sub>h</sub>|DEFTYPE|UNSIGNED48|
 |001A<sub>h</sub>|DEFTYPE|UNSIGNED56|
 |001B<sub>h</sub>|DEFTYPE|UNSIGNED64|
-|001C<sub>h</sub>–001F<sub>h</sub>保留||
+|001C<sub>h</sub>–001F<sub>h</sub>|保留||
 |0020<sub>h</sub>|DEFSTRUCT|PDO_COMMUNICATION_PARAMETER|
 |0021<sub>h</sub>|DEFSTRUCT|PDO_MAPPING|
 |0022<sub>h</sub>|DEFSTRUCT|SDO_PARAMETER|
