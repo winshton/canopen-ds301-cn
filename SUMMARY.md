@@ -12,5 +12,5 @@
    * [通信对象](chapter7.2.md)
    * [网络初始化和系统boot-up](chapter7.3.md)
    * [对象字典](chapter7.4.md)
-   * 通信协议规范
+   * [通信协议规范](chapter7.5.md)
 
