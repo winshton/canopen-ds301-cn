@@ -191,14 +191,16 @@ CANopen设备可选支持标准数据类型编码的数据长度(UNSIGNED32)。�
 
 ####7.4.8.3 **SDO参数记录规格**
 表48指定SDO参数记录。
-表48：SDO参数记录
+<center/>表48：SDO参数记录
 
-索引	子索引	名称	数据类型
-0022h	00h	最大子索引支持	UNSIGNED8
-	01h	COB-ID 客户端->服务器	UNSIGNED32
-	02h	COB-ID 服务器->客户端	UNSIGNED32
-	03h	SDO客户端应答服务器的Node-ID	UNSIGNED8
-7.4.8.4身份记录规格
+|索引|子索引|名称|数据类型|
+|---|---|---|---|
+|0021<sub>h</sub>|00<sub>h</sub>|最大子索引支持|UNSIGNED8|
+|''|01<sub>h</sub>|COB-ID 客户端->服务器|UNSIGNED32|
+|''|02<sub>h</sub>|COB-ID 服务器->客户端|UNSIGNED32|
+|''|03<sub>h</sub>|SDO客户端应答服务器的Node-ID|UNSIGNED8|
+
+####7.4.8.4 **身份记录规格**
 表49指定身份的记录。
 表49：身份记录
 索引	子索引	名称	数据类型
