@@ -162,25 +162,25 @@
 |**位(S)**|**值**|**描述**|
 |---|---|---|
 |x|x|无意义|
-|gen.|0<sub>b</sub><br/>1<sub>b<sub>|所在CANopen设备不生成同步消息<br/>CANopen设备生成同步消息|
+|gen.|0<sub>b</sub><br/>1<sub>b</sub>|所在CANopen设备不生成同步消息<br/>CANopen设备生成同步消息|
 |frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(CAN标准帧)<br/>29位CAN-ID有效(CAN扩展帧)|
 |29位CAN-ID|x|29位扩展帧CAN-ID|
 |11位CAN-ID|x|11位标准帧CAN-ID|
 位29(frame)和位30(gen.)可以是静态的(不可更改)。如果CANopen设备不生成同步消息，试图设置30位(gen.)为1<sub>b</sub>将得到SDO中止应答(中止代码：0609 0030<sub>h</sub>)。如果CANopen设备仅支持标准帧，则试图置位29(frame)为1<sub>b</sub>将得到SDO中止应答(中止代码：0609 0030<sub>h<sub>)。设置位30至1<sub>b</sub>并且同步计数器的溢出值大于0，在计数器值复位为1时启动第一次SYNC消息。对象有效时(位 30 = 1<sub>b<sub/>)不允许更改0~29位。  
 **对象描述**
 
-索引	1005h
-名称	同步COB-ID 
-对象代码	VAR
-数据类型	UNSIGNED32
-类别	条件的
-强制的，如果PDO通信支持基于同步方式
-条目说明
+|索引|1005<sub>h</sub>|
+|---|---|
+|名称|同步COB-ID| 
+|对象代码|VAR|
+|数据类型|UNSIGNED32|
+|类别|条件的<br/>强制的，如果PDO通信支持基于同步方式|
+**条目说明**
 
-子索引	00h
-访问权限	rw
-const如果COB-ID不可更改
-PDO 映射	否
-取值范围	请参阅值定义
-默认值	0000 0080h或8000 0080h
+|子索引|00<sub>h</sub>|
+|---|---|
+|访问权限|rw<br/>const如果COB-ID不可更改|
+|PDO 映射|否|
+|取值范围|请参阅值定义|
+|默认值|0000 0080<sub>h</sub>或8000 0080<sub>h</sub>|
 
