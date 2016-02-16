@@ -157,20 +157,17 @@
 ![图54：同步COB-ID结构](./CANopen_DS301_CN_image/54.png)
 图54：同步COB-ID结构
 
+<center/>表55：同步COB-ID描述  
 
-表55：同步COB-ID描述
-位 ( S )	值	描述
-x	x	无意义
-gen.	0b
-1b	所在CANopen设备不生成同步消息
- CANopen设备生成同步消息
-frame	0b
-1b	11位CAN-ID有效(CAN标准帧)
-29位CAN-ID有效(CAN扩展帧)
-29位CAN-ID	x	29位扩展帧CAN-ID
-11位CAN-ID	x	11位标准帧CAN-ID
-位29(frame)和位30(gen.)可以是静态的(不可更改)。如果CANopen设备不生成同步消息，试图设置30位(gen.)为1b 将得到SDO中止应答(中止代码：0609 0030h)。如果CANopen设备仅支持标准帧，则试图置位29(frame)为1b 将得到SDO中止应答(中止代码：0609 0030h)。设置位30至1b并且同步计数器的溢出值大于0，在计数器值复位为1时启动第一次SYNC消息。对象有效时(位 30 = 1b)不允许更改0~29位。
-对象描述
+|**位(S)**|**值**|**描述**|
+|---|---|---|
+|x|x|无意义|
+|gen.|0<sub>b</sub><br/>1<sub>b<sub>|所在CANopen设备不生成同步消息<br/>CANopen设备生成同步消息|
+|frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(CAN标准帧)<br/>29位CAN-ID有效(CAN扩展帧)|
+|29位CAN-ID|x|29位扩展帧CAN-ID|
+|11位CAN-ID|x|11位标准帧CAN-ID|
+位29(frame)和位30(gen.)可以是静态的(不可更改)。如果CANopen设备不生成同步消息，试图设置30位(gen.)为1<sub>b</sub>将得到SDO中止应答(中止代码：0609 0030<sub>h</sub>)。如果CANopen设备仅支持标准帧，则试图置位29(frame)为1<sub>b</sub>将得到SDO中止应答(中止代码：0609 0030<sub>h<sub>)。设置位30至1<sub>b</sub>并且同步计数器的溢出值大于0，在计数器值复位为1时启动第一次SYNC消息。对象有效时(位 30 = 1<sub>b<sub/>)不允许更改0~29位。  
+**对象描述**
 
 索引	1005h
 名称	同步COB-ID 
