@@ -545,13 +545,11 @@ CANopen设备复位(对于子索引01<sub>h</sub>到7F<sub>h</sub>执行NMT复�
 |类别|条件的<br/>强制性的，如果支持应急对象|
 **条目说明**
 
-子索引	00h
-访问权限	rw
-const如果COB-ID不可更改
-PDO 映射	否
-取值范围	UNSIGNED32
-默认值	CAN-ID：80h+Node-ID
-frame：	0b
-valid：	协议或制造商指定
+|子索引|00<sub>h</sub>|
+|---|---|
+|访问权限|rw<br/>const如果COB-ID不可更改|
+|PDO映射|否|
+|取值范围|UNSIGNED32|
+|默认值|CAN-ID：80h+Node-ID<br/>frame：0b<br/>valid：协议或制造商指定|
 
 
