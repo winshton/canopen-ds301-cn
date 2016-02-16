@@ -72,7 +72,7 @@ PDO 通信遵循的生产者/消费者关系见4.4.4。
 
   -data type:     据PDO映射
 
-  -inhibit-time:  N*100 s,$$\mu$$N>0
+  -inhibit-time:  N*100 $$\mu$$s,N>0
 
 #####7.2.2.4.2 **PDO写服务**
 PDO写服务是推模式。可以有多个PDO消费者，也可以没有，但PDO生产者只能有一个。
