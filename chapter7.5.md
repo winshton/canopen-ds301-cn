@@ -1249,7 +1249,7 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 
 |**位(们)**|**值**|**描述**|
 |---|---|
-|valid|0<sub>b</sub><br/>1<sub>b</sub>SDO存在/有效<br/>SDO不存在/无效|
+|valid|0<sub>b</sub><br/>1<sub>b</sub>|SDO存在/有效<br/>SDO不存在/无效|
 |dyn|0<sub>b</sub><br/>1<sub>b</sub>|值静态分配<br/>值动态分配|
 |frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(标准帧)<br/>29位CAN-ID有效(扩展帧)|
 |29位CAN-ID|x|29位CAN-ID的扩展帧|
@@ -1307,6 +1307,17 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 **值定义**  
 子索引00<sub>h</sub>包含有效的对象条目记录。其值至少是02<sub>h</sub>。如果支持抑制时间其值为03<sub>h</sub>，如果支持事件定时器其值为05<sub>h</sub>。  
 子索引01<sub>h</sub>包含RPDO的COB-ID(见图67和表66)。
+![图67：RPDO的COB-ID结构](./CANopen_DS301_CN_image/67.png)
+图67：RPDO的COB-ID结构
 
 
+<center/>表66：RPDO COB-ID说明
+
+|**位(们)**|**值**|**描述**|
+|---|---|
+|valid|0<sub>b</sub><br/>1<sub>b</sub>|PDO存在/有效<br/>PDO不存在/无效|
+|reserved|x|任意|
+|frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(标准帧)<br/>29位CAN-ID有效(扩展帧)|
+|29位CAN-ID|x|29位CAN-ID的扩展帧|
+|11位CAN-ID|x|11位CAN-ID的标准帧|
 
