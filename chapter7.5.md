@@ -1302,6 +1302,11 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 |PDO映射|否|
 |取值范围|01<sub>h</sub>~7F<sub>h</sub>|
 |默认值|制造商指定|
+####7.5.2.35 **对象1400<sub>h</sub>~15FF<sub>h</sub>：RPDO通信参数**
+此对象包含CANopen设备接收PDOs的通信参数。  
+**值定义**  
+子索引00<sub>h</sub>包含有效的对象条目记录。其值至少是02<sub>h</sub>。如果支持抑制时间其值为03<sub>h</sub>，如果支持事件定时器其值为05<sub>h</sub>。  
+子索引01<sub>h</sub>包含RPDO的COB-ID(见图67和表66)。
 
 
 
