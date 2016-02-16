@@ -1229,13 +1229,14 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 |取值范围|请参阅*值定义*|
 |默认值|**索引1200<sub>h</sub>：**<br/>CAN-ID5800<sub>h</sub>+Node-ID<br/>frame：0<sub>b</sub><br/>dyn：0<sub>b</sub><br/>valid：0<sub>b</sub><br/>**索引1201<sub>h</sub>~127F<sub>h</sub>：**<br/>CAN-ID：制造商制定(参见7.3.5)<br/>frame：制造商指定<br/>dyn:0<sub>b</sub><br/>valid：1<sub>b</sub>或由应用协议定义|
 
-子索引	03h
-描述	SDO客户端Node-ID
-条目类别	可选
-访问权限	rw
-PDO 映射	否
-取值范围	01h~7Fh
-默认值	制造商指定
+|子索引|03<sub>h</sub>|
+|---|---|
+|描述|SDO客户端Node-ID|
+|条目类别|可选|
+|访问权限|rw|
+|PDO映射|否|
+|取值范围|01<sub>h</sub>~7F<sub>h</sub>|
+|默认值|制造商指定|
 
 
 
