@@ -1320,4 +1320,6 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 |frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(标准帧)<br/>29位CAN-ID有效(扩展帧)|
 |29位CAN-ID|x|29位CAN-ID的扩展帧|
 |11位CAN-ID|x|11位CAN-ID的标准帧|
+valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不使用，清除该位即可。对于支持4个RPDOs的CANopen设备，该功能是必要的，因为每个CANopen设备前四个RPDO是带有默认CAN-ID的通用预定义连接集。仅支持标准帧的CANopen设备企图置位29(frame)为1b将得到SDO中止传输响应(中止代码：0609 0030<sub>h</sub>)。当该对象存在并有效(位 31 = 0<sub>b</sub>)时，位0至29禁止更改。如果设备支持使能(位31=0<sub>b</sub>)和禁止(bit31 = 1<sub>b</sub>)RPDO操作，对位0至30更改将返回SDO中止传输相应(中止代码：0609 0030<sub>h</sub>或0800 000<sub>h</sub>)。  
+如果CANopen设备使用设备协议，一定要支持通用预定义连接集(见表67)。
 
