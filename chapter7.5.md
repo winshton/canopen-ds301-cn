@@ -1294,14 +1294,14 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 |取值范围|请参阅*值定义*|
 |默认值|CAN-ID：制造商指定(参见7.3.5)<br/>frame：制造商指定<br/>dyn：0<sub>b</sub><br/>valid：1<sub>b</sub>或由应用协议定义|
 
-子索引	03h
-描述	SDO服务器Node-ID
-条目类别	强制
-访问权限	rw
-const，如果值不可更改的
-PDO 映射	否
-取值范围	01h~7Fh
-默认值	制造商指定
+|子索引|03<sub>h</sub>|
+|---|---|
+|描述|SDO服务器Node-ID|
+|条目类别|强制|
+|访问权限|rw<br/>const，如果值不可更改的|
+|PDO映射|否|
+|取值范围|01<sub>h</sub>~7F<sub>h</sub>|
+|默认值|制造商指定|
 
 
 
