@@ -1220,13 +1220,12 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 |默认值|**索引1200<sub>h</sub>：**<br/>CAN-ID：600<sub>h</sub>+Node-ID<br/>frame：0<sub>b</sub><br/>dyn：0<sub>b</sub><br/>valid：0<sub>b</sub><br/>**索引1201<sub>h</sub>~127F<sub>h</sub>：**<br/>CAN-ID：制造商制定(参见7.3.5)<br/>frame：制造商指定<br/>dyn:0<sub>b</sub><br/>valid：1<sub>b</sub>或由应用协议定义|
 
 
-子索引	02h
-描述	COB-ID 服务器->客户端(tx)
-条目类别	强制性
-访问权限	索引1200h：	ro
-索引1201h~127Fh：	rw
-Const，如果由应用协议定义
-PDO 映射	可选
+|子索引|02<sub>h</sub>|
+|---|---|
+|描述|COB-ID服务器->客户端(tx)|
+|条目类别|强制性|
+|访问权限|**索引1200<sub>h</sub>：**<br/>ro<br/>**索引1201<sub>h</sub>~127F<sub>h</sub>：**<br/>rw<br/>const，如果由应用协议定义|
+|PDO映射|可选|
 取值范围	请参阅值定义
 默认值	索引1200h：	CAN-ID：580h+Node-ID frame：	0b
 dyn：	0b
