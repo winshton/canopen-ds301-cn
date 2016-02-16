@@ -1173,6 +1173,85 @@ CANopen设备复位(对于子索引01<sub>h</sub>到7F<sub>h</sub>执行NMT复�
 |PDO映射|否|
 |取值范围|请参阅*值定义*|
 |默认值|协议或制造商指定|
+####7.5.2.33 **对象1200<sub>h</sub>~127F<sub>h</sub>：SDO服务器参数**
+为了描述CANopen设备使用的SDO，前文介绍了SDO参数的数据类型。该数据类型在对象字典索引22<sub>h</sub>处。该结构定义见7.4.8。  
+**值定义**  
+子索引00<sub>h</sub>是SDO支持的参数数量。子索引01<sub>h</sub>和02<sub>h</sub>指定SDO的COB-ID。子索引03<sub>h</sub>是该CANopen设备的客户端node-ID。  
+![图65：SDO服务器COB-ID结构](./CANopen_DS301_CN_image/65.png)
+图65：SDO服务器COB-ID结构
+ 
+<center/>表64：SDO服务器COB-ID说明
+
+|**位(们)**|**值**|**描述**|
+|---|---|
+|valid|0<sub>b</sub><br/>1<sub>b</sub>SDO存在/有效<br/>SDO不存在/无效|
+|dyn|0<sub>b</sub><br/>1<sub>b</sub>|值静态分配<br/>值动态分配|
+|frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(标准帧)<br/>29位CAN-ID有效(扩展帧)|
+|29位CAN-ID|x|29位CAN-ID的扩展帧|
+|11位CAN-ID|x|11位CAN-ID的标准帧|
+SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时有效。仅支持标准帧的CANopen设备企图置位29(frame)为1<sub>b</sub>将得到SDO中止传输响应(中止代码：0609 0030<sub>h</sub>)。当该对象存在并有效(位 31 = 0<sub>b</sub>)时，位0至29禁止更改。  
+如果子索引01h或02h位dyn(位30)设为1b，该对象所有参数不能保存在非易失性存储器中，该位用于标记支持动态SDO连接的CANopen设备。动态 SDO 连接是使用前临时配置。静态SDO连接配置是长效的，因而要保存在非易失性存储器中。CANopen 管理器可以通过dyn位检测SDO连接的动态性。
+对象描述
+索引	1200h~127Fh
+名称	SDO服务器参数
+对象代码	RECORD
+数据类型	SDO parameter record
+类别	条件
+索引1200h：	可选
+索引1201h~127Fh：	只要支持了其参数就是强制性的
+条目说明
+
+子索引	00h
+描述	子索引数
+条目类别	强制性
+访问权限	const
+PDO 映射	否
+取值范围	索引1200h：	02h
+索引1201h~127Fh：	02h~03h
+默认值	协议或制造商指定
+ 
+
+子索引	01h
+描述	COB-ID客户端->服务器(rx)
+条目类别	强制性
+访问权限	索引1200h:	const
+索引1201h~127Fh:	rw
+const，如果由应用协议定义
+PDO 映射	可选
+取值范围	请参阅值定义
+默认值	索引1200h：	CAN-ID：600h+Node-ID frame：	0b
+dyn：	0b
+valid：	0b
+索引1201h~127Fh：	CAN-ID：制造商制定(参见7.3.5)
+frame：	制造商指定
+dyn：	0b
+valid：	1b或由应用协议定义
+
+
+子索引	02h
+描述	COB-ID 服务器->客户端(tx)
+条目类别	强制性
+访问权限	索引1200h：	ro
+索引1201h~127Fh：	rw
+Const，如果由应用协议定义
+PDO 映射	可选
+取值范围	请参阅值定义
+默认值	索引1200h：	CAN-ID：580h+Node-ID frame：	0b
+dyn：	0b
+valid：	0b
+索引1201h~127Fh：	CAN-ID：制造商制定(参见7.3.5)
+frame：	制造商指定
+dyn：	0b
+valid：	1b或由应用协议定义
+
+
+子索引	03h
+描述	SDO客户端Node-ID
+条目类别	可选
+访问权限	rw
+PDO 映射	否
+取值范围	01h~7Fh
+默认值	制造商指定
 
 
 
