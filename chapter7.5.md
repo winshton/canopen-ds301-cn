@@ -1238,9 +1238,9 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 |取值范围|01<sub>h</sub>~7F<sub>h</sub>|
 |默认值|制造商指定|
 ####7.5.2.34 **对象1280<sub>h</sub>~12FF<sub>h</sub>：SDO客户端参数**
-对象包含CANopen设备作为SDO客户端所需参数。如果设备支持该对象，所有子索引必须可用。这部分索引起始于1280h。
-值定义
-子索引00h是SDO支持的参数数量。子索引01h和02h指定SDO的COB-ID。子索引03h是该CANopen 设备的服务器node-ID。
+对象包含CANopen设备作为SDO客户端所需参数。如果设备支持该对象，所有子索引必须可用。这部分索引起始于1280<sub>h</sub>。  
+**值定义**  
+子索引00<sub>h</sub>是SDO支持的参数数量。子索引01<sub>h</sub>和02<sub>h</sub>指定SDO的COB-ID。子索引03<sub>h</sub>是该CANopen设备的服务器node-ID。  
 31	30	29	28	11	10	0
 
 
