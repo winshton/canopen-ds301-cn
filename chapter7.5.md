@@ -468,6 +468,35 @@ CANopen设备复位(对于子索引01<sub>h</sub>到7F<sub>h</sub>执行NMT复�
 |PDO 映射|否|
 |取值范围|请参阅值定义<br/>(图57为写访问；图59读访问)|
 |默认值|协议或制造商指定| 
+####7.5.2.15 **对象1012h：时间戳对象COB-ID**
+此对象为时间戳对象(TIME)的COB-ID配置。此外，它还定义了CANopen设备是否消费TIME或是否生成TIME。对象结构见图60和表58。  
+**值定义**
+![图60：TIME COB-ID结构](./CANopen_DS301_CN_image/60.png)
+图60：TIME COB-ID结构
+
+<center/>表58：TIME COB-ID说明
+|**位(们)**|**值**|**描述**|
+|consume|0<sub>b</sub><br/>1<sub>b</sub>|CANopen设备不消费TIME消息<br/>CANopen设备消费TIME消息|
+|produce|0<sub>b</sub><br/>1<sub>b</sub>|CANopen设备不会产生TIME消息<br/> CANopen设备产生TIME消息|
+|frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(CAN标准帧)<br/>29位CAN-ID有效(CAN扩展帧)|
+|29位CAN-ID|x|29位CAN-ID的扩展帧|
+|11位CAN-ID|x|11位CAN-ID 的标准帧|
+位29(frame)、30(produce)可以是静态的(不能更改)。如果CANopen设备不支持生成TIME，试图置位30(produce)为1<sub>b</sub>将得到SDO中止传输应答(中止代码：0609 0030<sub>h</sub>)。如果CANopen设备仅支持标准帧，试图置位29(frame)1<sub>b</sub>得到SDO中止传输应答(中止代码：0609 0030<sub>h</sub>)。当此对象存在(位30=1<sub>b</sub>或位31=1<sub>b</sub>)时位0至29不可更改。  
+**对象描述**
+
+|索引|1012<sub>h</sub>|
+|---|---|
+|名称|时间戳COB-ID|
+|对象代码|VAR|
+|数据类型|UNSIGNED32|
+|类别|可选的|
+
+|子索引|00<sub>h</sub>|
+|---|---|
+|访问权限|rw|
+|PDO 映射|否|
+|取值范围|UNSIGNED32|
+|默认值|CAN-ID：100<sub>h</sub><br/>frame：0<sub>b</sub><br/>有效：协议或制造商指定|
 
 
 
