@@ -1058,6 +1058,60 @@ CANopen设备复位(对于子索引01<sub>h</sub>到7F<sub>h</sub>执行NMT复�
 |PDO映射|否|
 |取值范围|UNSIGNED16|
 |默认值|无|
+####7.5.2.31 **对象1028h：应急消费对象**
+此对象应表明该CANopen设备消费的EMCY对象的COB-ID配置。  
+**值定义**  
+![图64：EMCY COB-ID结构](./CANopen_DS301_CN_image/64.png)
+图64：EMCY COB-ID结构
+ 
+<center/>表62: EMCY COB-ID说明
+
+|**位(们)**|**值**|**描述**|
+|---|---|---|
+|valid|0<sub>b</sub><br/>1<sub>b</sub>EMCY消费者存在/有效<br/>EMCY消费者不存在/无效|
+|res|0<sub>b</sub>|保留(始终为0<sub>b</sub>)|
+|frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(标准帧)<br/>29位CAN-ID有效(扩展帧)
+|29位CAN-ID|X|29位CAN-ID 的扩展帧|
+|11位CAN-ID|X|11位CAN-ID的标准帧|
+仅支持标准帧的CANopen 设备企图置位29(frame)为1b将得到SDO中止传输响应(中止代码：0609 0030<sub>h</sub>)。当应急对象有效(位31=0<sub>b</sub>)时，位0至29禁止更改。  
+子索引号关联node-ID。  
+**对象描述**  
+
+|索引|1028<sub>h</sub>|
+名称	应急消费者
+对象代码	ARRAY
+数据类型	UNSIGNED32
+类别	可选
+
+条目说明
+
+子索引	00h
+描述	子索引数
+条目类别	强制
+访问权限	const
+PDO 映射	否
+取值范围	01h~7Fh
+默认值	协议或制造商指定
+
+
+子索引	01h
+描述	应急消费者1
+条目类别	强制
+访问权限	rw
+const，如果应急消费者不可更改
+PDO 映射	否
+取值范围	请参阅值定义
+默认值	协议或制造商指定
+ 
+
+子索引	02h~7Fh
+描述	应急消费者2~127
+条目类别	可选
+访问权限	rw;
+const，如果应急消费者不可更改
+PDO 映射	否
+取值范围	请参阅值定义
+默认值	协议或制造商指定
 
 
 
