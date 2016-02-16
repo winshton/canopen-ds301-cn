@@ -1241,14 +1241,7 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 对象包含CANopen设备作为SDO客户端所需参数。如果设备支持该对象，所有子索引必须可用。这部分索引起始于1280<sub>h</sub>。  
 **值定义**  
 子索引00<sub>h</sub>是SDO支持的参数数量。子索引01<sub>h</sub>和02<sub>h</sub>指定SDO的COB-ID。子索引03<sub>h</sub>是该CANopen设备的服务器node-ID。  
-31	30	29	28	11	10	0
-
-
-valid	
-dyn	
-frame	0 0000h	11 位CAN-ID
-			29 位CAN-ID
-MSB	LSB
+![图66：SDO客户端COB-ID结构](./CANopen_DS301_CN_image/65.png)
 图66：SDO客户端COB-ID结构
 
 
