@@ -518,7 +518,7 @@ CANopen设备复位(对于子索引01<sub>h</sub>到7F<sub>h</sub>执行NMT复�
 |PDO映射|可选|
 |取值范围|UNSIGNED32|
 |默认值|0|
-####7.5.2.17 **对象1014h：EMCY COB-ID**
+####7.5.2.17 **对象1014<sub>h</sub>：EMCY COB-ID**
 此对象表达已配置的EMCY 写服务COB-ID。  
 **值定义**
 ![图61：EMCY标识结构](./CANopen_DS301_CN_image/61.png)
