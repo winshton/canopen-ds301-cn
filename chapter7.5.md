@@ -1247,18 +1247,13 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 
 表65：SDO客户端COB-ID说明
 
-位 (们)	值	描述
-valid	0b
-1b	SDO存在/有效
-SDO不存在/无效
-dyn	0b
- 1b	值静态分配
-值动态分配
-frame	0b
-1b	11位CAN-ID有效(标准帧)
-29位CAN-ID有效(扩展帧)
-29位CAN-ID	x	29位CAN-ID的扩展帧
-11位CAN-ID	x	11位CAN-ID的标准帧
+|**位(们)**|**值**|**描述**|
+|---|---|
+|valid|0<sub>b</sub><br/>1<sub>b</sub>SDO存在/有效<br/>SDO不存在/无效|
+|dyn|0<sub>b</sub><br/>1<sub>b</sub>|值静态分配<br/>值动态分配|
+|frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(标准帧)<br/>29位CAN-ID有效(扩展帧)|
+|29位CAN-ID|x|29位CAN-ID的扩展帧|
+|11位CAN-ID|x|11位CAN-ID的标准帧|
 SDO仅在子索引01h和02h的最高位置0b时有效。仅支持标准帧的CANopen 设备企图置位29(frame)为1b将得到SDO中止传输响应(中止代码：0609 0030h)。如果设备支持使能(位31=0b)和禁止(bit 31 = 1b)SDO客户端的操作，对位0至30更改将返回SDO中止传输相应(中止代码：0609 0030h 或 0800 000h)。
 如果子索引01h或02h位dyn(位30)设为1b，该对象所有参数不能保存在非易失性存储器中，该位用于标记支持动态SDO连接的CANopen设备。动态SDO连接是使用前临时配置。静态SDO连接配置是长效的，因而要保存在非易失性存储器中。CANopen 管理器可以通过dyn位检测SDO连接的动态性。
 对象描述
