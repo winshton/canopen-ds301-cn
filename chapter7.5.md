@@ -1332,5 +1332,19 @@ valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不
 |1402<sub>h</sub>|CAN-ID：400<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>reserved：制造商指定<br/>valid：协议或制造商指定|
 |1403<sub>h</sub>|CAN-ID：500<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>reserved：制造商指定<br/>valid：协议或制造商指定|
 |1404<sub>h</sub><br/>15FF<sub>h</sub>|CAN-ID：协议或制造商指定(见7.3.5)<br/>frame：协议或制造商指定<br/>reserved：制造商指定<br/>valid：1<sub>b</sub>或由应用协议定义|
+如果CANopen设备使用应用协议，则应遵守应用协议的预定义连接集。  
+子索引02<sub>h</sub>定义了RPDO的接收性质(见表68)。试图更改其值为任何不支持的传输类型将应答SDO中止(中止代码:0609 0030<sub>h</sub>)。  
+<center/>表68：RPDO传输类型说明
+
+|**值**|**描述**|
+|---|---|
+|00<sub>h</sub>|同步|
+|: : : : :|: : : : :|
+|F0<sub>h</sub>|同步|
+|F1<sub>h</sub>|保留|
+|: : : : :|: : : : :|
+|FD<sub>h</sub>|保留|
+|FE<sub>h</sub>|事件驱动(制造商指定)|
+|FF<sub>h</sub>|事件驱动(设备协议和应用协议指定)|
 
 
