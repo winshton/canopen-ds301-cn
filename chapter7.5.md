@@ -151,17 +151,10 @@
 |取值范围|UNSIGNED32|
 |默认值|无|
 
-7.5.2.5	对象1005h：COB-ID同步消息
+####7.5.2.5 **对象1005h：COB-ID同步消息**
 此对象为已配置的同步(SYNC)对象COB-ID。此外，它定义了 CANopen 设备是否生成同步。对象结构定义于图54和表55。
-值定义
-31	30	29	28	11	10	0
-
-
-X	
-gen.	
-frame	0 0000h	11位CAN-ID
-			29位CAN-ID
-MSB	LSB
+值定义  
+![图54：同步COB-ID结构](./CANopen_DS301_CN_image/54.png)
 图54：同步COB-ID结构
 
 
