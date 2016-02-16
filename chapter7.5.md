@@ -1322,4 +1322,15 @@ SDO仅在子索引01<sub>h</sub>和02<sub>h</sub>的最高位置0<sub>b</sub>时
 |11位CAN-ID|x|11位CAN-ID的标准帧|
 valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不使用，清除该位即可。对于支持4个RPDOs的CANopen设备，该功能是必要的，因为每个CANopen设备前四个RPDO是带有默认CAN-ID的通用预定义连接集。仅支持标准帧的CANopen设备企图置位29(frame)为1b将得到SDO中止传输响应(中止代码：0609 0030<sub>h</sub>)。当该对象存在并有效(位 31 = 0<sub>b</sub>)时，位0至29禁止更改。如果设备支持使能(位31=0<sub>b</sub>)和禁止(bit31 = 1<sub>b</sub>)RPDO操作，对位0至30更改将返回SDO中止传输相应(中止代码：0609 0030<sub>h</sub>或0800 000<sub>h</sub>)。  
 如果CANopen设备使用设备协议，一定要支持通用预定义连接集(见表67)。
+<center/>表67：RPDO的通用预定义连接集
+
+|**索引**|**默认值**|
+|---|---|
+|1400<sub>h</sub>|CAN-ID：200<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>reserved：制造商指定<br/>valid：协议或制造商指定|
+|1401<sub>h</sub>|CAN-ID：300<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>reserved：制造商指定<br/>valid：协议或制造商指定|
+|**索引**|**默认值**|
+|1402<sub>h</sub>|CAN-ID：400<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>reserved：制造商指定<br/>valid：协议或制造商指定|
+|1403<sub>h</sub>|CAN-ID：500<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>reserved：制造商指定<br/>valid：协议或制造商指定|
+|1404<sub>h</sub><br/>15FF<sub>h</sub>|CAN-ID：协议或制造商指定(见7.3.5)<br/>frame：协议或制造商指定<br/>reserved：制造商指定<br/>valid：1<sub>b</sub>或由应用协议定义|
+
 
