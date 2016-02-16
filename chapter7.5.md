@@ -518,5 +518,40 @@ CANopen设备复位(对于子索引01<sub>h</sub>到7F<sub>h</sub>执行NMT复�
 |PDO映射|可选|
 |取值范围|UNSIGNED32|
 |默认值|0|
+####7.5.2.17 **对象1014h：EMCY COB-ID**
+此对象表达已配置的EMCY 写服务COB-ID。  
+**值定义**
+![图61：EMCY标识结构](./CANopen_DS301_CN_image/61.png)
+图61：EMCY标识结构
+ 
+<center/>表59：EMCY COB-ID说明
+
+|**位(们)**|**值**|**描述**|
+|---|---|---|
+|valid|0<sub>b</sub><br/>1<sub>b</sub>|EMCY存在/有效<br/>EMCY不存在/无效|
+|30|0<sub>b</sub>|保留(始终为0<sub>b</sub>)|
+|frame|0<sub>b</sub><br/>1<sub>b</sub>|11CAN-ID有效(CAN标准帧)<br/>29位CAN-ID有效(CAN扩展帧)|
+|29位CAN-ID|x|29位CAN-ID的扩展帧|
+|11位CAN-ID|x|11位CAN-ID的标准帧|
+
+仅支持标准帧的CANopen设备企图置位29(frame)为1b将得到SDO中止传输响应(中止代码：0609 0030h)。当应急对象有效(位31= 0b)时，位0至29禁止更改。  
+**对象描述**
+
+|索引|1014<sub>h</sub>|
+|---|---|
+|名称|应急消息COB-ID|
+|对象代码|VAR|
+|数据类型|UNSIGNED32|
+|类别|条件的<br/>强制性的，如果支持应急对象|
+**条目说明**
+
+子索引	00h
+访问权限	rw
+const如果COB-ID不可更改
+PDO 映射	否
+取值范围	UNSIGNED32
+默认值	CAN-ID：80h+Node-ID
+frame：	0b
+valid：	协议或制造商指定
 
 
