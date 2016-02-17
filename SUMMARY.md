@@ -13,5 +13,5 @@
    * [网络初始化和系统boot-up](chapter7.3.md)
    * [对象字典](chapter7.4.md)
    * [通信协议规范](chapter7.5.md)
-* 附件A(更多信息)
+* [附件A(更多信息)](chapter8.md)
 
