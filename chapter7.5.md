@@ -1503,7 +1503,7 @@ valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不
 
 |子索引|02<sub>h</sub>~40<sub>h</sub>|
 |---|---|
-|描述|第2<sup>n</sup>d到64<sup>th</sup>应用程序对象|
+|描述|第2<sup>nd</sup>到64<sup>th</sup>应用程序对象|
 |条目类别|可选|
 |访问权限|rw<br/>const，如果映射条目不可更改的|
 |PDO映射|否|
