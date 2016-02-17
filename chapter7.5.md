@@ -1541,6 +1541,7 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 <center/>表72：TPDO类型描述
 
 |**值**|**描述**|
+|---|---|
 |00<sub>h</sub>|同步(非周期)|
 |01<sub>h</sub>|同步(每个SYNC一周期)|
 |02<sub>h</sub>|同步(每2<sup>n</sup>dSYNC一周期)|
