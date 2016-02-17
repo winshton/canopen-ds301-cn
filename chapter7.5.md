@@ -1563,3 +1563,10 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 ![图72：总线同步和采样](./CANopen_DS301_CN_image/72.png)
 图72：总线同步和采样
 
+子索引03<sub>h</sub>为抑制时间。如果传输类型设置为FE<sub>h</sub>和FF<sub>h</sub>，它就是最小的PDO传输间隔。该值单位100$$\mu$$s。值为0将禁用抑制时间。PDO存在(子索引01<sub>h</sub>位31设为0<sub>b</sub>)该值不应被更改。  
+子索引04<sub>h</sub>保留。它不应被执行，在这种情况下读取或写入将导致SDO中止应答(中止代码：0609 0011<sub>h</sub>)。  
+ 
+子索引05<sub>h</sub>包含事件定时器。如果传输类型设置为FE<sub>h</sub>和FF<sub>h</sub>，该值为最大PDO传输时间间隔。该值单位ms。值为0将禁用事件定时器。  
+子索引06<sub>h</sub>为SYNC起始值。SYNC起始值为 0表示该PDO不处理SYNC帧的计数。SYNC起始值为1至240表示该PDO处理SYNC帧的计数。如果SYNC消息计数器未使能(见7.5.2.22)，子索引 06<sub>h</sub>应被忽略。SYNC帧的计数器值等于SYNC起始值时，视为收到第一帧SYNC。当PDO存在(子索引01<sub>h</sub>位31设为0<sub>b</sub>)该值不应更改。  
+注意 如果CANopen 设备进入NMT运行态，而检测到SYNC计数器值大于SYNC起始值，CANopen 设备必须等待下一轮正确的同步计数器值。  
+
