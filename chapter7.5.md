@@ -1661,4 +1661,7 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 |FD<sub>h</sub>|保留的|
 |FE<sub>h</sub>|SAM-MPDO|
 |FF<sub>h</sub>|DAM-MPDO|
+子索引从 01<sub>h</sub>到40<sub>h</sub>包含应用对象映射信息。对象描述了PDO数据内容对应的索引、子索引和长度(见图 73和图74)。长度为数据位长度，用于验证映射。
+![图73：TPDO映射结构](./CANopen_DS301_CN_image/73.png)
+图73：TPDO映射结构  
 
