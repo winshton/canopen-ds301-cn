@@ -1472,3 +1472,13 @@ valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不
 如果CANopen设备接收PDO数据字节少于映射数据字节数(长度)，CANopen设备应启动EMCY写服务，如果支持的话，错误代码8210<sub>h</sub>。  
 ![图70：RPDO映射规则](./CANopen_DS301_CN_image/70.png)
 图70：RPDO映射规则
+**对象描述**
+
+|索引|1600<sub>h</sub>~17FF<sub>h</sub>|
+|---|---|
+|名称|RPDO映射参数|
+|对象代码|RECORD|
+|数据类型|PDO映射参数记录|
+|类别|条件<br/>强制，对于每个支持的PDO|
+
+
