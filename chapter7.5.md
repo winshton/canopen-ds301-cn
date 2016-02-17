@@ -1537,7 +1537,24 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 |1803<sub>h</sub>|CAN-ID：480<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>RTR：协议或制造商指定<br/>valid：协议或制造商指定|
 |1804<sub>h</sub>到19FF<sub>h</sub>|CAN-ID：协议或制造商指定(见7.3.5)<br/>frame：协议或制造商指定<br/>RTR：协议或制造商指定<br/>valid：1<sub>b</sub>或应用协议定义|
 如果CANopen设备使用应用协议，则应遵守应用协议的预定义连接集。  
-子索引02<sub>h</sub>定义了TPDO的发送性质(见表72)。试图更改其值为任何不支持的传输类型将应答SDO中止(中止代码：0609 0030<sub>h</sub>)。
+子索引02<sub>h</sub>定义了TPDO的发送性质(见表72)。试图更改其值为任何不支持的传输类型将应答SDO中止(中止代码：0609 0030<sub>h</sub>)。  
+<center/>表72：TPDO类型描述
+
+|**值**|**描述**|
+|00h	同步(非周期)
+01h	同步(每个SYNC一周期)
+02h	同步(每2ndSYNC一周期)
+03h	同步(每3rdSYNC一周期)
+04h	同步(每4thSYNC一周期)
+:::::	: : : : :
+F0h	同步(每240thSYNC一周期)
+F1h	保留
+:::::	: : : : :
+FBh	保留
+FCh	仅RTR(同步)
+FDh	仅RTR(事件驱动)
+FEh	事件驱动(制造商指定)
+FFh	事件驱动(设备协议和应用协议指定)
 
 
 
