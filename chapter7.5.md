@@ -1520,7 +1520,7 @@ valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不
 
 |**位(S)**|**值**|**描述**|
 |---|---|---|
-|valid|0<sub>b</sub><br/>1<sub>b</sub>PDO存在/有效<br/>PDO不存/无效|
+|valid|0<sub>b</sub><br/>1<sub>b</sub>|PDO存在/有效<br/>PDO不存/无效|
 |RTR|0<sub>b</sub><br/>1<sub>b</sub>|此PDO允许RTR<br/>此PDO不允许RTR|
 |frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(标准帧)<br/>29位CAN-ID有效(扩展帧)|
 |29位CAN-ID|x|29位CAN-ID扩展帧|
