@@ -1569,4 +1569,12 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 子索引05<sub>h</sub>包含事件定时器。如果传输类型设置为FE<sub>h</sub>和FF<sub>h</sub>，该值为最大PDO传输时间间隔。该值单位ms。值为0将禁用事件定时器。  
 子索引06<sub>h</sub>为SYNC起始值。SYNC起始值为 0表示该PDO不处理SYNC帧的计数。SYNC起始值为1至240表示该PDO处理SYNC帧的计数。如果SYNC消息计数器未使能(见7.5.2.22)，子索引 06<sub>h</sub>应被忽略。SYNC帧的计数器值等于SYNC起始值时，视为收到第一帧SYNC。当PDO存在(子索引01<sub>h</sub>位31设为0<sub>b</sub>)该值不应更改。  
 注意 如果CANopen 设备进入NMT运行态，而检测到SYNC计数器值大于SYNC起始值，CANopen 设备必须等待下一轮正确的同步计数器值。  
+**对象描述**
+
+|索引|1800<sub>h</sub>~19FF<sub>h</sub>|
+|---|---|
+|名称|TPDO的通信参数|
+|对象代码|RECORD|
+|数据类型|PDO通信参数记录|
+|类别|有条件的<br/>强制，如果对应TPDO被支持|
 
