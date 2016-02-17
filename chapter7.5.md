@@ -1675,4 +1675,6 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 
 如果在第3步的CANopen设备检测到索引和子索引不存在或不允许被映射将响应SDO中止传输(中止代码：0602 0000<sub>h</sub> 或0604 0041<sub>h</sub>) 。  
 如果在第4步的CANopen设备检测到TPDO映射不可用或无效，CANopen设备响应SDO中止传输(中止代码：0602 0000<sub>h</sub>或0604 0042<sub>h</sub>)。  
+![图74：TPDO映射规则](./CANopen_DS301_CN_image/74.png)
+图74：TPDO映射规则  
 
