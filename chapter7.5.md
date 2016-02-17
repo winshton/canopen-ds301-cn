@@ -1515,6 +1515,15 @@ valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不
 子索引00<sub>h</sub>包含有效的对象条目记录。其值至少是02<sub>h</sub>。如果支持抑制时间其值为03<sub>h</sub>，如果支持事件定时器其值为05<sub>h</sub>。  
 子索引01<sub>h</sub>包含TPDO的COB-ID(见图71和表70)。  
 ![图71：TPDO的COB-ID结构](./CANopen_DS301_CN_image/71.png)
-图71：TPDO的COB-ID结构
+图71：TPDO的COB-ID结构  
+<center/>表70：TPDO的COB-ID描述
+
+|**位(S)**|**值**|**描述**|
+|---|---|---|
+|valid|0<sub>b</sub><br/>1<sub>b</sub>PDO存在/有效<br/>PDO不存/无效|
+|RTR|0<sub>b</sub><br/>1<sub>b</sub>|此PDO允许RTR<br/>此PDO不允许RTR|
+|frame|0<sub>b</sub><br/>1<sub>b</sub>|11位CAN-ID有效(标准帧)<br/>29位CAN-ID有效(扩展帧)|
+|29位CAN-ID|x|29位CAN-ID扩展帧|
+|11位CAN-ID|x|11位CAN-ID标准帧|
 
 
