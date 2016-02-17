@@ -1541,20 +1541,20 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 <center/>表72：TPDO类型描述
 
 |**值**|**描述**|
-|00h	同步(非周期)
-01h	同步(每个SYNC一周期)
-02h	同步(每2ndSYNC一周期)
-03h	同步(每3rdSYNC一周期)
-04h	同步(每4thSYNC一周期)
-:::::	: : : : :
-F0h	同步(每240thSYNC一周期)
-F1h	保留
-:::::	: : : : :
-FBh	保留
-FCh	仅RTR(同步)
-FDh	仅RTR(事件驱动)
-FEh	事件驱动(制造商指定)
-FFh	事件驱动(设备协议和应用协议指定)
+|00<sub>h</sub>|同步(非周期)|
+|01<sub>h</sub>|同步(每个SYNC一周期)|
+|02<sub>h</sub>|同步(每2<sup>n</sup>dSYNC一周期)|
+|03<sub>h</sub>|同步(每3<sup>rd</sup>SYNC一周期)|
+|04<sub>h</sub>|同步(每4<sup>th</sup>SYNC一周期)|
+|:::::|: : : : :|
+|F0<sub>h</sub>|同步(每240<sup>th</sup>SYNC一周期)|
+|F1<sub>h</sub>|保留|
+|:::::|: : : : :|
+|FB<sub>h</sub>|保留|
+|FC<sub>h</sub>|仅RTR(同步)|
+|FD<sub>h</sub>|仅RTR(事件驱动)|
+|FE<sub>h</sub>|事件驱动(制造商指定)|
+|FF<sub>h</sub>|事件驱动(设备协议和应用协议指定)|
 
 
 
