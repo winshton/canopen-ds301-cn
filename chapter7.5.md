@@ -1470,4 +1470,5 @@ valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不
 如果在第4步的CANopen设备检测到RPDO映射不可用或无效，CANopen设备响应SDO中止应答(中止代码：0602 0000<sub>h</sub>或0604 0042<sub>h</sub>)。  
 如果CANopen设备接收PDO数据字节数超出映射数据字节数(长度)，CANopen设备应使用前者的数据字节长度，并且启动EMCY写服务，如果支持的话。  
 如果CANopen设备接收PDO数据字节少于映射数据字节数(长度)，CANopen设备应启动EMCY写服务，如果支持的话，错误代码8210<sub>h</sub>。  
-
+![图70：RPDO映射规则](./CANopen_DS301_CN_image/70.png)
+图70：RPDO映射规则
