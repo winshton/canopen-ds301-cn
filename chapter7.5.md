@@ -1536,6 +1536,9 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 |1802<sub>h</sub>|CAN-ID：380<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>RTR：协议或制造商指定<br/>valid：协议或制造商指定|
 |1803<sub>h</sub>|CAN-ID：480<sub>h</sub> + Node-ID<br/>frame：0<sub>b</sub><br/>RTR：协议或制造商指定<br/>valid：协议或制造商指定|
 |1804<sub>h</sub>到19FF<sub>h</sub>|CAN-ID：协议或制造商指定(见7.3.5)<br/>frame：协议或制造商指定<br/>RTR：协议或制造商指定<br/>valid：1<sub>b</sub>或应用协议定义|
+如果CANopen设备使用应用协议，则应遵守应用协议的预定义连接集。  
+子索引02<sub>h</sub>定义了TPDO的发送性质(见表72)。试图更改其值为任何不支持的传输类型将应答SDO中止(中止代码：0609 0030<sub>h</sub>)。
+
 
 
 
