@@ -1439,4 +1439,20 @@ valid(位31)允许设定在NMT运行态哪些RPDO可用。PDOs可以配置但不
 此对象包含CANopen设备发送PDOs的映射参数。  
 **值定义**  
 子索引00<sub>h</sub>包含有效对象条目映射记录或指定值(见表69)，例如，如果支持MPDO，有效的对象条目数须为该应用程序对象相应RPDO应收到的数目。
+<center/>表69：RPDO映射值
+
+|**值**|**描述**|
+|---|---|
+|00<sub>h</sub>|映射已禁用|
+|01<sub>h</sub>|子索引01<sub>h</sub>有效|
+|02<sub>h</sub>|子索引01<sub>h</sub>和02<sub>h</sub>有效|
+|03<sub>h</sub>|子索引从01<sub>h</sub>到03<sub>h</sub>有效|
+|04<sub>h</sub>|子索引从01<sub>h</sub>到04<sub>h</sub>有效|
+|: : : : :|: : : : :|
+|40<sub>h</sub>|子索引从01<sub>h</sub>到40<sub>h</sub>有效|
+|41<sub>h</sub>|保留的|
+|: : : : :|: : : : :|
+|FD<sub>h</sub>|保留的|
+|FE<sub>h</sub>|SAM-MPDO|
+|FF<sub>h</sub>|DAM-MPDO|
 
