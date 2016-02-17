@@ -1556,6 +1556,9 @@ valid(位31)允许设定在NMT运行态哪些TPDO可用。PDOs可以配置但不
 |FD<sub>h</sub>|仅RTR(事件驱动)|
 |FE<sub>h</sub>|事件驱动(制造商指定)|
 |FF<sub>h</sub>|事件驱动(设备协议和应用协议指定)|
+* 同步意味着该PDO 在SYNC后发送。CANopen设备在收到SYNC后开始数据采样(参见图72)。如果是非周期方式，CANopen设备在内部事件给定并且紧接着的一次SYNC后开始采样，随后发送PDO。如果是周期方式，每个SYNC、2<sup>nd</sup>SYNC、3<sup>rd</sup>SYNC等(由给定参数值决定)启动一次采样，发送一次PDO。
+* 仅RTR指PDO 由远程RTR触发发送。如果是同步方式，CANopen设备每个SYNC接收后开始采样，然后缓冲进PDO(参见图72)。如果是事件驱动方式，CANopen 设备在收到RTR请求后开始采样并直接生成PDO发送。
+* 事件驱动的方式指PDO的发送由CANopen设备任意时刻发生的内部事件触发。事件的定义不在本文范围，可由设备协议或应用协议规定。
 
 
 
